@@ -14,7 +14,12 @@ app.get("/",(req,res)=>{
 
 // user routes
 const userAuthRoutes = require("./routes/users/userAuthroutes");
-app.use("/userauth/api",userAuthRoutes)
+app.use("/userauth/api",userAuthRoutes);
+
+
+// recipe routes
+const reciperoutes = require("./routes/recipes/recipeAuthRoutes");
+app.use("/recipe/api",reciperoutes);
 
 // server start
 app.listen(port,()=>{
