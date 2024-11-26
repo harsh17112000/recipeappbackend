@@ -21,6 +21,10 @@ app.use("/userauth/api",userAuthRoutes);
 const reciperoutes = require("./routes/recipes/recipeAuthRoutes");
 app.use("/recipe/api",reciperoutes);
 
+// review routes
+const reviewroutes = require("./routes/reviews/reviewAuthRoutes");
+app.use("/review/api",reviewroutes);
+
 // server start
 app.listen(port,()=>{
     console.log(`server start at port no ${port}`)
